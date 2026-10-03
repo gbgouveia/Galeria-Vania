@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta Editorial Extraída das Fotografias Reais do Aniversário da Vânia */
+    --gallery-bg: #f9f7f4;                 /* Fundo: Off-white quente e refinado (efeito papel fine-art) */
+    --gallery-surface: #ffffff;            /* Superfície dos elementos de destaque */
+    --gallery-surface-secondary: #f3ede5;  /* Creme suave / bege linho */
+    --gallery-foreground: #2b2420;         /* Texto principal: Grafite profundo aquecido (evita preto bruto #000) */
+    --gallery-primary: #4e3f36;            /* Tom primário: Madeira e chocolate nobre */
+    --gallery-primary-soft: #847265;       /* Taupe aveludado para subtítulos */
+    --gallery-accent: #bfa07a;             /* Destaque: Champagne dourado / trigo dos arranjos florais */
+    --gallery-accent-soft: #f4ecdf;        /* Toque suave champagne translúcido */
+    --gallery-border: #e6dfd6;             /* Bordas ultra-sutis aquecidas */
+    --gallery-muted: #786d64;              /* Texto secundário e metadados */
+
+    /* Lightbox: Escuro acolhedor derivado das sombras e contrastes das fotos */
+    --lightbox-bg: #14110f;                /* Preto sépia suave de alta imersão */
+    --lightbox-surface: #1e1916;           /* Superfície dos botões do modal */
+    --lightbox-border: #332b25;            /* Borda discreta com toque sépia */
+    --lightbox-text: #f7f4ef;              /* Texto off-white nítido e suave aos olhos */
+    --lightbox-muted: #a6988b;             /* Metadados no visualizador */
+
+    --radius: 0.5rem;
+  }
+}
+
+* {
+  border-color: var(--gallery-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--gallery-bg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gallery-bg);
+  color: var(--gallery-foreground);
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia de títulos editoriais */
+h1, h2, h3, .font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gallery-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gallery-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gallery-primary-soft);
+}
